@@ -1,6 +1,6 @@
-* {
+/* * {
 border: 1px solid red;
-} *
+} * */
 
 
 body {
@@ -52,7 +52,6 @@ h1 {
   justify-content: space-around;
   width: 80%;
   height: 5%;
-  margin-bottom: 150px;
   margin-right: 250px;
 }
 
@@ -81,4 +80,12 @@ h1 {
 
 .accordian  {
   font-family: 'Gloria Hallelujah', cursive;
+}
+
+.buttons-container {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-right: 255px;
+  margin-bottom: 150px;
 }
