@@ -1,0 +1,62 @@
+/* * {
+border: 1px solid red;
+} * */
+
+
+body {
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 50px;
+  padding-right: 250px;
+  font-stretch:
+}
+
+.palettes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-right: 250px;
+  width: 80%;
+}
+
+.hex-boxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 150px;
+  width: 150px;
+  padding-right: 20px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: medium;
+}
+
+.colors-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  height: 5%;
+  margin-bottom: 150px;
+  margin-right: 250px;
+}
+
+.hex-values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
