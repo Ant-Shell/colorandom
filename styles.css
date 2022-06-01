@@ -1,10 +1,10 @@
-/* * {
+* {
 border: 1px solid red;
-} * */
+} *
 
 
 body {
-  /* font-family: 'Gloria Hallelujah', cursive; */
+  font-family: 'Gloria Hallelujah', cursive;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -23,6 +23,7 @@ h1 {
   padding-right: 250px;
   font-stretch:
 }
+
 
 .palettes-container {
   display: flex;
@@ -59,4 +60,25 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+/* .palette-window {
+  display: flex;
+  justify-content: flex-end;
+  height: 75%;
+  width: 80%;
+} */
+
+.hidden {
+  display: none;
+}
+
+.saved-palettes-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.accordian  {
+  font-family: 'Gloria Hallelujah', cursive;
 }
