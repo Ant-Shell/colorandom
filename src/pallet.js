@@ -13,3 +13,5 @@ class Palette {
     this.colors.push(newColor)
   }
 }
+
+//boop
