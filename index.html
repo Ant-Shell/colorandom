@@ -34,11 +34,32 @@
     </section>
 
     <section class="colors-container">
-      <div class="hex-values" id="lockIcon1"> Hex Values <img src="./assets/unlock.svg" alt="lock"> </div>
-      <div class="hex-values" id="lockIcon2"> Hex Values <img src="./assets/unlock.svg" alt="lock"> </div>
-      <div class="hex-values" id="lockIcon3"> Hex Values <img src="./assets/unlock.svg" alt="lock"> </div>
-      <div class="hex-values" id="lockIcon4"> Hex Values <img src="./assets/unlock.svg" alt="lock"> </div>
-      <div class="hex-values" id="lockIcon5"> Hex Values <img src="./assets/unlock.svg" alt="lock"> </div>
+      <!-- <div class="hex-values" > Hex Values <img id="lockIcon1" src="./assets/unlock.svg" alt="lock"> </div> -->
+      <div class="hex-values" > Hex Values</div>
+        <button class="image-button-container">
+           <img class="image-button" id="unlockIcon1" src="./assets/unlock.svg" alt="unlock">
+           <img class="image-button hidden" id="lockedIcon1" src="./assets/lock-screen.svg" alt="lock">
+        </button>
+      <div class="hex-values" > Hex Values  </div>
+        <button class="image-button-container">
+           <img class="image-button" id="lockIcon1" src="./assets/unlock.svg" alt="unlock">
+           <img class="image-button hidden" id="lockedIcon2" src="./assets/lock-screen.svg" alt="lock">
+        </button>
+      <div class="hex-values" > Hex Values  </div>
+        <button class="image-button-container">
+          <img class="image-button" id="lockIcon3" src="./assets/unlock.svg" alt="unlock">
+          <img class="image-button hidden" id="lockedIcon3" src="./assets/lock-screen.svg" alt="lock">
+        </button>
+      <div class="hex-values" > Hex Values  </div>
+        <button class="image-button-container">
+          <img class="image-button" id="lockIcon4" src="./assets/unlock.svg" alt="unlock">
+          <img class="image-button hidden" id="lockedIcon4" src="./assets/lock-screen.svg" alt="lock">
+        </button>
+      <div class="hex-values" > Hex Values  </div>
+        <button class="image-button-container">
+          <img class="image-button" id="lockIcon5" src="./assets/unlock.svg" alt="unlock">
+          <img class="image-button hidden" id="lockedIcon5" src="./assets/lock-screen.svg" alt="lock">
+        </button>
     </section>
 
     <section class="buttons-container">
@@ -46,10 +67,11 @@
       <button class="save-palette">Save Palette</button>
     </section>
 
-    <script src="./src/main.js"></script>
+
     <script src="./src/data.js"></script>
     <script src="./src/color.js"></script>
     <script src="./src/pallet.js"></script>
+    <script src="./src/main.js"></script>
   </body>
 
 </html>

@@ -8,10 +8,9 @@ class Palette {
     this.id = Date.now();
     this.colors= [];
   }
-  newMethod() {
+  addNewColor() {
     var newColor = new Color(getRandomColor());
     this.colors.push(newColor)
+    console.log(newColor)
   }
 }
-
-//boopscoopdoop
