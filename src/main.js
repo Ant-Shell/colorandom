@@ -19,17 +19,10 @@ var images = document.querySelectorAll('img')
 window.addEventListener('load', randomColor)
 // images.addEventListener('click', toggle)
 
-//Functions
-
-//on page load display colors
-//on page re-load reset colors
-
-
 function randomColor() {
-  //console.log('color', color)
-  var color = getRandomColor()
   for (var i = 0; i < hexBox.length; i++) {
-  hexBox[i].style.backgroundColor = color
+    var color = getRandomColor()
+    hexBox[i].style.backgroundColor = color
   }
 }
 
