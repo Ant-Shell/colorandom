@@ -16,7 +16,7 @@ var hexBox = document.querySelectorAll('.hex-boxes')
 var images = document.querySelectorAll('img')
 
 //EventListeners
-window.addEventListener('load',randomColor)
+window.addEventListener('load', randomColor)
 // images.addEventListener('click', toggle)
 
 //Functions
@@ -24,10 +24,13 @@ window.addEventListener('load',randomColor)
 //on page load display colors
 //on page re-load reset colors
 
-function randomColor(color) {
+
+function randomColor() {
   //console.log('color', color)
-  var color = new Palette(color[getRandomColor(color)])
-  box1.innerHTML = color
+  var color = getRandomColor()
+  for (var i = 0; i < hexBox.length; i++) {
+  hexBox[i].style.backgroundColor = color
+  }
 }
 
 
