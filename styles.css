@@ -89,3 +89,13 @@ h1 {
   padding-right: 255px;
   margin-bottom: 150px;
 }
+
+.image-button {
+  width: 30px;
+  padding-right: 30px;
+}
+
+.image-button-container {
+  background-color: white;
+  border: none;
+}

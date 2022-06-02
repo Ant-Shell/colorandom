@@ -12,8 +12,10 @@ var icon4 = document.getElementById('lockIcon4')
 var icon5 = document.getElementById('lockIcon5')
 
 var hexBox = document.querySelectorAll('.hex-boxes')
+var hexValues = document.querySelectorAll('.hex-values')
 
 var images = document.querySelectorAll('img')
+
 
 //EventListeners
 window.addEventListener('load', randomColor)
@@ -23,6 +25,7 @@ function randomColor() {
   for (var i = 0; i < hexBox.length; i++) {
     var color = getRandomColor()
     hexBox[i].style.backgroundColor = color
+    hexValues[i].innerText = color;
   }
 }
 
