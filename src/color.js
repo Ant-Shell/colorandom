@@ -5,10 +5,9 @@ class Color {
   }
   toggle() {
     if (!this.locked) {
-        this.locked = true
-      }
-      else
-        this.locked = false
+      this.locked = true
+    } else
+      this.locked = false
   }
 }
 //   constructor(hexcode) {
@@ -42,12 +41,12 @@ class Color {
 //   }
 // }
 
-    // var hexCodeArray = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
-    // var hexCode = "#"
-    // var hexCode = `#${output}`
+// var hexCodeArray = [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f']
+// var hexCode = "#"
+// var hexCode = `#${output}`
 
-    // function getRandomColor(hexCodeArray) {
-    //   return Math.floor(Math.random(hexCodeArray) * hexCodeArray.length);
+// function getRandomColor(hexCodeArray) {
+//   return Math.floor(Math.random(hexCodeArray) * hexCodeArray.length);
 
 //     for (var i = 0; hexCodeArray.length < 6; i++) {
 //       var hexCode = Math.floor(Math.random(hexCodeArray) * hexCodeArray.length).toString(16);
