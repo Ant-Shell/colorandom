@@ -21,25 +21,63 @@ var hexBox = document.querySelectorAll('.hex-boxes')
 var hexValues = document.querySelectorAll('.hex-values')
 var unlockImages = document.querySelectorAll('.image-button')
 var lockedImages = document.querySelectorAll('.locked-image-button')
+var colorsContainer = document.querySelector(".colors-container")
+
+var buttonArray = []
+
 
 //EventListeners
 window.addEventListener('load', randomColor)
 
-function displayButtonLocks() {
-  var buttonLocks = document.querySelectorAll(".image-button");
-  for (var i = 0; i < buttonLocks.length; i++) {
-    buttonLocks[i].addEventListener("click", function() {
-      toggleLockIcons(event)
-    })
-  };
-  console.log(buttonLocks)
-};
+colorsContainer.addEventListener('click', function(event) {
+  toggleLockIcons(event)
+})
+
+
+function hide() {
+  icon1.classList.toggle("hidden")
+  lockedicon1.classList.toggle("hidden")
+}
+
+function show() {
+  icon1.classList.toggle("hidden")
+  lockedicon1.classList.toggle("hidden")
+}
+
+function toggleLockIcons(event) {
+  if (event.target.id === "unlockIcon1") {
+    hide()
+  }  else if (event.target.id === "lockedIcon1") {
+    show()
+  }
+ //  } else if () {
+ // return;
+ //  } else if {
+ //    return;
+ //  } else if () {
+ //    return;
+ //  } else if () {
+ //    return;
+ //  } else () {
+ //    return;
+ //  }
+}
+
+// function displayButtonLocks() {
+//   var buttonLocks = document.querySelectorAll(".image-button");
+//   for (var i = 0; i < buttonLocks.length; i++) {
+//     buttonLocks[i].addEventListener("click", function() {
+//       toggleLockIcons(event)
+//     })
+//   };
+//   console.log(buttonLocks)
+// };
 
 var palette = new Palette()
 var color = new Color()
 
 function randomColor() {
-  displayButtonLocks()
+  // displayButtonLocks()
   for (var i = 0; i < hexBox.length; i++) {
     var color = getRandomColor()
     hexBox[i].style.backgroundColor = color
@@ -48,19 +86,19 @@ function randomColor() {
   }
 }
 
-function toggleLockIcons(event) {
-  console.log(event.target)
-  // for (var i = 0; i < unlockImages.length; i++) {
-  // color.toggle()
-  if (event.target.src === './assets/unlock.svg') {
-    event.target.closest('img').classList.remove("hidden")
-    event.target.classList.toggle("hidden")
-  } else {
-    event.target.classList.remove("hidden")
-    // event.target.src = './assets/lock-screen.svg'
-    // toggleUnlockIcons()
-  }
-}
+// function toggleLockIcons(event) {
+//   console.log(event.target)
+//   // for (var i = 0; i < unlockImages.length; i++) {
+//   // color.toggle()
+//   if (event.target.src === './assets/unlock.svg') {
+//     event.target.closest('img').classList.remove("hidden")
+//     event.target.classList.toggle("hidden")
+//   } else {
+//     event.target.classList.remove("hidden")
+//     // event.target.src = './assets/lock-screen.svg'
+//     // toggleUnlockIcons()
+//   }
+// }
 
 function toggleUnlockIcons() {
   for (var i = 0; i < lockedImages.length; i++) {
