@@ -92,6 +92,11 @@ h1 {
 
 .image-button {
   width: 30px;
+padding-right: 30px;
+}
+
+.locked-image-button {
+  width: 30px;
   padding-right: 30px;
 }
 

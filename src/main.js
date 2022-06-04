@@ -24,11 +24,6 @@ var lockedImages = document.querySelectorAll('.locked-image-button')
 
 //EventListeners
 window.addEventListener('load', randomColor)
-// icon1.addEventListener('click', toggleLockIcons)
-// icon2.addEventListener('click', toggleLockIcons)
-// icon3.addEventListener('click', toggleLockIcons)
-// icon4.addEventListener('click', toggleLockIcons)
-// icon5.addEventListener('click', toggleLockIcons)
 
 function displayButtonLocks() {
   var buttonLocks = document.querySelectorAll(".image-button");
@@ -55,15 +50,30 @@ function randomColor() {
 
 function toggleLockIcons(event) {
   console.log(event.target)
-  for (var i = 0; i < unlockImages.length; i++) {
+  // for (var i = 0; i < unlockImages.length; i++) {
+  // color.toggle()
+  if (event.target.src === './assets/unlock.svg') {
+    event.target.closest('img').classList.remove("hidden")
+    event.target.classList.toggle("hidden")
+  } else {
+    event.target.classList.remove("hidden")
+    // event.target.src = './assets/lock-screen.svg'
+    // toggleUnlockIcons()
+  }
+}
+
+function toggleUnlockIcons() {
+  for (var i = 0; i < lockedImages.length; i++) {
     color.toggle()
     if (color.locked) {
-      unlockImages[i].classList.add("hidden")
-    } else {
-      lockedImages[i].classList.remove("hidden")
+      lockedImages[i].classList.add("hidden")
+      unlockImages[i].classList.remove("hidden")
     }
   }
 }
+
+
+
 
 
 
