@@ -1,45 +1,20 @@
 //QuerySelectors
-var box1 = document.getElementById('box1')
-var box2 = document.getElementById('box2')
-var box3 = document.getElementById('box3')
-var box4 = document.getElementById('box4')
-var box5 = document.getElementById('box5')
-
-var icon1 = document.getElementById('unlockIcon1')
-var icon2 = document.getElementById('unlockIcon2')
-var icon3 = document.getElementById('unlockIcon3')
-var icon4 = document.getElementById('unlockIcon4')
-var icon5 = document.getElementById('unlockIcon5')
-
-var lockedicon1 = document.getElementById('lockedIcon1')
-var lockedicon2 = document.getElementById('lockedIcon2')
-var lockedicon3 = document.getElementById('lockedIcon3')
-var lockedicon4 = document.getElementById('lockedIcon4')
-var lockedicon5 = document.getElementById('lockedIcon5')
-
 var hexBox = document.querySelectorAll('.hex-boxes')
 var hexValues = document.querySelectorAll('.hex-values')
 var unlockImages = document.querySelectorAll('.image-button')
-var lockedImages = document.querySelectorAll('.locked-image-button')
+var imageButtonContainer = document.getElementsByClassName('image-button-container')
+var colorContainer = document.querySelector('.colors-container')
 
 //EventListeners
 window.addEventListener('load', randomColor)
-
-function displayButtonLocks() {
-  var buttonLocks = document.querySelectorAll(".image-button");
-  for (var i = 0; i < buttonLocks.length; i++) {
-    buttonLocks[i].addEventListener("click", function() {
-      toggleLockIcons(event)
-    })
-  };
-  console.log(buttonLocks)
-};
+colorContainer.addEventListener('click', function(event) {
+  lockColor(event)
+})
 
 var palette = new Palette()
 var color = new Color()
 
 function randomColor() {
-  displayButtonLocks()
   for (var i = 0; i < hexBox.length; i++) {
     var color = getRandomColor()
     hexBox[i].style.backgroundColor = color
@@ -48,37 +23,16 @@ function randomColor() {
   }
 }
 
-function toggleLockIcons(event) {
-  console.log(event.target)
-  // for (var i = 0; i < unlockImages.length; i++) {
-  // color.toggle()
-  if (event.target.src === './assets/unlock.svg') {
-    event.target.closest('img').classList.remove("hidden")
-    event.target.classList.toggle("hidden")
-  } else {
-    event.target.classList.remove("hidden")
-    // event.target.src = './assets/lock-screen.svg'
-    // toggleUnlockIcons()
-  }
-}
-
-function toggleUnlockIcons() {
-  for (var i = 0; i < lockedImages.length; i++) {
-    color.toggle()
-    if (color.locked) {
-      lockedImages[i].classList.add("hidden")
-      unlockImages[i].classList.remove("hidden")
+function lockColor(event) {
+  var hexId = event.target.id
+  for (var i = 1; i <= unlockImages.length; i++) {
+    if (hexId === `unlockIcon${i}` && !palette.colors[(i - 1)].locked) {
+      palette.colors[(i - 1)].locked = true
+      unlockImages[(i-1)].src = './assets/lock-screen.svg'
+    }
+    else if (hexId === `unlockIcon${i}` && palette.colors[(i - 1)].locked) {
+      palette.colors[(i - 1)].locked = false
+      unlockImages[(i - 1)].src = './assets/unlock.svg'
     }
   }
 }
-
-
-
-
-
-
-//we know there are 5 locks
-//we have to lock them independently
-//if we click on one lock it will change to a locked icon
-//if the icon is locked, the color should not change
-//if the icon is locked, the user can unlock it
