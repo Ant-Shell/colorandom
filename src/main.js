@@ -5,6 +5,10 @@ var unlockImages = document.querySelectorAll('.image-button')
 var imageButtonContainer = document.getElementsByClassName('image-button-container')
 var colorContainer = document.querySelector('.colors-container')
 var newPaletteButton = document.querySelector(".new-palette");
+var savedPaletteButton = document.querySelector(".save-palette");
+var accordionButton = document.querySelector(".accordion");
+var savedPaletteWindow = document.querySelector(".palette-window");
+var closeSavedPaletteWindowButton = document.querySelector(".closeSavedPaletteWindow");
 
 //EventListeners
 window.addEventListener('load', randomColor)
@@ -12,6 +16,10 @@ colorContainer.addEventListener('click', function(event) {
   lockColor(event)
 })
 newPaletteButton.addEventListener('click', newPalette)
+// savePaletteButton.addEventListener('click', savePalette)
+accordionButton.addEventListener('click', displaySavedPaletteWindow);
+closeSavedPaletteWindowButton.addEventListener('click', closeSavedPaletteWindow)
+
 
 var palette = new Palette()
 var color = new Color()
@@ -24,8 +32,6 @@ function randomColor() {
     palette.generateColor(color)
   }
 }
-
-
 
 function lockColor(event) {
   var hexId = event.target.id
@@ -40,10 +46,18 @@ function lockColor(event) {
     }
   }
 }
-// We want to prevent a new palette from loading upon pressing the refresh button
-// When the "new Palette" button is clicked
-// We want to invoke a function that will generate a new set of colors to the palette container
-
 function newPalette() {
   randomColor();
+}
+
+// function savePalette() {
+//
+// }
+
+function displaySavedPaletteWindow() {
+  savedPaletteWindow.classList.remove('hidden');
+}
+
+function closeSavedPaletteWindow() {
+  savedPaletteWindow.classList.add('hidden');
 }
