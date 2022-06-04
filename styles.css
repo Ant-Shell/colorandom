@@ -61,13 +61,6 @@ h1 {
   justify-content: space-evenly;
 }
 
-/* .palette-window {
-  display: flex;
-  justify-content: flex-end;
-  height: 75%;
-  width: 80%;
-} */
-
 .hidden {
   display: none;
 }
