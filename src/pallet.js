@@ -6,11 +6,10 @@ function getRandomColor() {
 class Palette {
   constructor() {
     this.id = Date.now();
-    this.colors= [];
+    this.colors = [];
   }
-  addNewColor() {
-    var newColor = new Color(getRandomColor());
+  generateColor(color) {
+    var newColor = new Color(color);
     this.colors.push(newColor)
-    console.log(newColor)
   }
 }
