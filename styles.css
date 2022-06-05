@@ -115,3 +115,8 @@ padding-right: 30px;
   z-index: 3;
   background-color: white;
 }
+
+.mini-palettes-container {
+  display: flex;
+
+}
