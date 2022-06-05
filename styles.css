@@ -4,7 +4,6 @@ border: 1px solid red;
 
 
 body {
-  font-family: 'Gloria Hallelujah', cursive;
   display: flex;
   height: 100vh;
   position: relative;
@@ -24,31 +23,27 @@ body {
 
 .header {
   display: flex;
+  justify-content: center;
 }
 
 h1 {
   display: flex;
   justify-content: flex-start;
   font-size: 50px;
-  padding-right: 250px;
   font-stretch:
 }
 
-
 .palettes-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
 }
 
 .hex-boxes {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  height: 150px;
-  width: 150px;
-  padding-right: 20px;
+  height: 175px;
+  width: 175px;
   border-color: black;
   border-style: solid;
   border-radius: 20px;
@@ -57,17 +52,20 @@ h1 {
 
 .colors-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 5%;
-  margin-right: 250px;
 }
 
 .hex-values {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
+}
+
+.hex-and-lock-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 175px;
 }
 
 .hidden {
@@ -82,6 +80,10 @@ h1 {
 }
 
 .accordian  {
+
+}
+
+.font-style  {
   font-family: 'Gloria Hallelujah', cursive;
 }
 
@@ -89,11 +91,11 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  margin-top: 75px;
 }
 
 .image-button {
   width: 30px;
-padding-right: 30px;
 }
 
 .locked-image-button {
@@ -119,4 +121,28 @@ padding-right: 30px;
 .mini-palettes-container {
   display: flex;
 
+}
+
+@media screen and (min-width: 100px) {
+  h2.hex-values {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h2.hex-values {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 100px) {
+  img.image-button {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  img.image-button {
+    width: 15px;
+  }
 }
