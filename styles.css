@@ -1,6 +1,6 @@
-/* * {
+* {
 border: 1px solid red;
-} * */
+} *
 
 
 body {
@@ -35,18 +35,15 @@ h1 {
 
 .palettes-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
 }
 
 .hex-boxes {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  height: 150px;
-  width: 150px;
-  padding-right: 20px;
+  height: 175px;
+  width: 175px;
   border-color: black;
   border-style: solid;
   border-radius: 20px;
@@ -55,37 +52,21 @@ h1 {
 
 .colors-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 5%;
-  margin-right: 250px;
 }
 
 .hex-values {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-evenly;
 }
 
-.hex-value1 {
-  padding-left: 150px;
-}
-
-.hex-value2 {
-  padding-left: 100px;
-}
-
-.hex-value3 {
-
-}
-
-.hex-value4 {
-
-}
-
-.hex-value5 {
-  padding-left: 50px;
+.hex-and-lock-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 175px;
 }
 
 .hidden {
@@ -116,26 +97,6 @@ h1 {
 
 .image-button {
   width: 30px;
-}
-
-.image-button1 {
-padding-right: 0px;
-}
-
-.image-button2 {
-padding-right: 100px;
-}
-
-.image-button3 {
-padding-right: 100px;
-}
-
-.image-button4 {
-padding-right: 100px;
-}
-
-.image-button5 {
-padding-right: 150px;
 }
 
 .locked-image-button {
