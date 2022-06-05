@@ -12,20 +12,22 @@ var closeSavedPaletteWindowButton = document.querySelector(".closeSavedPaletteWi
 var savePaletteSection = document.querySelector('.saved-palettes')
 
 //EventListeners
-window.addEventListener('load', randomColor)
+window.addEventListener('load', newPalette)
 colorContainer.addEventListener('click', function(event) {
   lockColor(event)
 })
 newPaletteButton.addEventListener('click', newPalette)
-savedPaletteButton.addEventListener('click', savePalette)
+savedPaletteButton.addEventListener('click', savePalette2)
 accordionButton.addEventListener('click', displaySavedPaletteWindow);
 closeSavedPaletteWindowButton.addEventListener('click', closeSavedPaletteWindow)
 
 
-var palette = new Palette()
-var color = new Color()
+var palette;
 
-var savedPalette = []
+function newPalette() {
+  palette = new Palette();
+  randomColor();
+}
 
 function randomColor() {
   for (var i = 0; i < hexBox.length; i++) {
@@ -34,6 +36,11 @@ function randomColor() {
     hexValues[i].innerText = color
     palette.generateColor(color)
   }
+}
+
+function getRandomColor() {
+  var randNum = Math.floor(Math.random() * 16777215).toString(16);
+  return `#${randNum}`
 }
 
 function lockColor(event) {
@@ -51,22 +58,20 @@ function lockColor(event) {
   }
 }
 
-function newPalette() {
-  randomColor();
-}
-
-function savePalette() {
-  savePaletteSection.innerHTML = ""
-  for (var i = 0; i < palette.colors.length; i++) {
-    savePaletteSection.innerHTML +=
-    `<section class="mini-palettes-container">
-      <div class="hex-boxes" style="background-color: ${palette.colors[i].hexCode};height:25px;width:25px"></div>
-    </section>
-    <button class="trash-can-button"> <img class="image-button" src="./assets/bin.svg">
-    </button>`
-    savedPalette.appendChild()
+function savePalette2() {
+  savePaletteSection.innerHTML += ""
+   if (savePaletteSection.innerHTML !== newPaletteElement) {
+    var newPaletteElement = document.createElement('figure')
+    newPaletteElement.classList.add('mini-hex-boxes-container')
+    newPaletteElement.innerHTML = `<div class="hex-boxes" style="background-color: ${palette.colors[0].hexCode};height:25px;width:25px"></div>
+      <div class="hex-boxes" style="background-color: ${palette.colors[1].hexCode};height:25px;width:25px"></div>
+      <div class="hex-boxes" style="background-color: ${palette.colors[2].hexCode};height:25px;width:25px"></div>
+      <div class="hex-boxes" style="background-color: ${palette.colors[3].hexCode};height:25px;width:25px"></div>
+      <div class="hex-boxes" style="background-color: ${palette.colors[4].hexCode};height:25px;width:25px"></div>
+      <img class="hex-boxes" id="trash" style="height:25px;width:25px" src="./assets/bin.svg">`
+    savePaletteSection.appendChild(newPaletteElement)
+    }
   }
-}
 
 function displaySavedPaletteWindow() {
   savedPaletteWindow.classList.remove('hidden');
