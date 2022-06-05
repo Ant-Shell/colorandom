@@ -38,7 +38,6 @@ function randomColor() {
 
 function lockColor(event) {
   var hexId = event.target.id
-  console.log(event.target.id)
   for (var i = 1; i <= unlockImages.length; i++) {
     if (hexId === `unlockIcon${i}` && !palette.colors[(i - 1)].locked) {
       palette.colors[(i - 1)].locked = true

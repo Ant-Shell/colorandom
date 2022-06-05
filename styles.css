@@ -4,7 +4,6 @@ border: 1px solid red;
 
 
 body {
-  /* font-family: 'Gloria Hallelujah', cursive; */
   display: flex;
   height: 100vh;
   position: relative;
@@ -69,6 +68,26 @@ h1 {
   justify-content: space-evenly;
 }
 
+.hex-value1 {
+  padding-left: 150px;
+}
+
+.hex-value2 {
+  padding-left: 100px;
+}
+
+.hex-value3 {
+
+}
+
+.hex-value4 {
+
+}
+
+.hex-value5 {
+  padding-left: 50px;
+}
+
 .hidden {
   display: none;
 }
@@ -81,6 +100,7 @@ h1 {
 }
 
 .accordian  {
+
 }
 
 .font-style  {
@@ -96,7 +116,26 @@ h1 {
 
 .image-button {
   width: 30px;
-padding-right: 30px;
+}
+
+.image-button1 {
+padding-right: 0px;
+}
+
+.image-button2 {
+padding-right: 100px;
+}
+
+.image-button3 {
+padding-right: 100px;
+}
+
+.image-button4 {
+padding-right: 100px;
+}
+
+.image-button5 {
+padding-right: 150px;
 }
 
 .locked-image-button {
@@ -122,4 +161,28 @@ padding-right: 30px;
 .mini-palettes-container {
   display: flex;
 
+}
+
+@media screen and (min-width: 100px) {
+  div.hex-values {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  div.hex-values {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 100px) {
+  img.image-button {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  img.image-button {
+    width: 15px;
+  }
 }

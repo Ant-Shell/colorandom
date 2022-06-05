@@ -2,16 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Grape+Nuts&display=swap" rel="stylesheet">
     <title>ColoRandom</title>
   </head>
-
   <body class="font-style">
     <div class="main">
     <section class="nav-bar">
       <button class="accordion font-style">Saved Palettes</button>
-
     </section>
     <header class="header">
       <h1>ColoRandom</h1>
@@ -24,40 +23,33 @@
         <div class="hex-boxes" id="box4"></div>
         <div class="hex-boxes" id="box5"></div>
       </section>
-
       <section class="colors-container">
-        <div class="hex-values"></div>
+        <div class="hex-values hex-value1"></div>
           <button class="image-button-container">
-             <img class="image-button" id="unlockIcon1" src="./assets/unlock.svg">
+             <img class="image-button image-button1" id="unlockIcon1" src="./assets/unlock.svg">
           </button>
-        <div class="hex-values"></div>
+        <div class="hex-values hex-value2"></div>
           <button class="image-button-container">
-             <img class="image-button" id="unlockIcon2" src="./assets/unlock.svg">
-
+             <img class="image-button image-button2" id="unlockIcon2" src="./assets/unlock.svg">
           </button>
-        <div class="hex-values"></div>
+        <div class="hex-values hex-value3"></div>
           <button class="image-button-container">
-            <img class="image-button" id="unlockIcon3" src="./assets/unlock.svg">
-
+            <img class="image-button image-button3" id="unlockIcon3" src="./assets/unlock.svg">
           </button>
-        <div class="hex-values"></div>
+        <div class="hex-values hex-value4"></div>
           <button class="image-button-container">
-            <img class="image-button" id="unlockIcon4" src="./assets/unlock.svg">
-
+            <img class="image-button image-button4" id="unlockIcon4" src="./assets/unlock.svg">
           </button>
-        <div class="hex-values"></div>
+        <div class="hex-values hex-value5"></div>
           <button class="image-button-container">
-            <img class="image-button" id="unlockIcon5" src="./assets/unlock.svg">
-
+            <img class="image-button image-button5" id="unlockIcon5" src="./assets/unlock.svg">
           </button>
       </section>
-
       <section class="buttons-container">
         <button class="new-palette font-style">New Palette</button>
         <button class="save-palette font-style">Save Palette</button>
       </section>
     </section>
-
     </div>
     <div class="palette-window hidden">
       <button class="closeSavedPaletteWindow">Close</button>
@@ -68,5 +60,4 @@
     <script src="./src/pallet.js"></script>
     <script src="./src/main.js"></script>
   </body>
-
 </html>
