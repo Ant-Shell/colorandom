@@ -59,7 +59,6 @@ h1 {
 
 .hex-values {
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-evenly;
 }
 
@@ -125,13 +124,13 @@ h1 {
 }
 
 @media screen and (min-width: 100px) {
-  div.hex-values {
+  h2.hex-values {
     font-size: 25px;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  div.hex-values {
+@media screen and (max-width: 800px) {
+  h2.hex-values {
     font-size: 15px;
   }
 }
@@ -142,7 +141,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   img.image-button {
     width: 15px;
   }
