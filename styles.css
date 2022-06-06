@@ -1,12 +1,27 @@
-* {
+/* * {
 border: 1px solid red;
-} *
+} * */
 
 
 body {
   display: flex;
   height: 100vh;
   position: relative;
+  background-image: url("assets/Popcorn_Ceiling.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  content: "";
+  opacity: .05;
+  z-index: 1000;
+  pointer-events: none;
+  background: url(noise.gif);
 }
 
 .main {
@@ -76,7 +91,6 @@ h1 {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-
 }
 
 .accordian  {
@@ -104,18 +118,21 @@ h1 {
 }
 
 .image-button-container {
-  background-color: white;
-  border: none;
+  opacity: .1;
+  background-image: url("assets/Popcorn_Ceiling.jpg");
+  border: 0;
 }
 
 .palette-window {
+  background-color: #66CDAA;
+  background-image: linear-gradient(#66CDAA, #DA70D6, #FF7F50);
+  background-size: cover;
   position: absolute;
   top: 0;
   right: 1px;
   width: 30%;
   height: 100vh;
   z-index: 3;
-  background-color: white;
 }
 
 .mini-palettes-container {
