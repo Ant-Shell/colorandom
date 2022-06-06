@@ -13,9 +13,6 @@ var savePaletteSection = document.querySelector('.saved-palettes');
 
 
 //EventListeners
-document.addEventListener('click', function(event) {
-
-})
 window.addEventListener('load', newPalette)
 colorContainer.addEventListener('click', function(event) {
   lockColor(event)
