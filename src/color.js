@@ -1,5 +1,5 @@
 class Color {
-  constructor(randNum) {
+  constructor(randHex) {
     this.hexCode = randHex
     this.locked = false
   }
