@@ -14,7 +14,6 @@ var savePaletteSection = document.querySelector('.saved-palettes');
 
 //EventListeners
 document.addEventListener('click', function(event) {
-  // console.log(event.target)
 
 })
 window.addEventListener('load', newPalette)
@@ -26,7 +25,6 @@ savedPaletteButton.addEventListener('click', savePalette)
 accordionButton.addEventListener('click', displaySavedPaletteWindow);
 closeSavedPaletteWindowButton.addEventListener('click', closeSavedPaletteWindow)
 savePaletteSection.addEventListener('click', deleteSavedPalette)
-
 
 var palette;
 var savedPalettes = [];
@@ -76,7 +74,6 @@ function deleteSavedPalette(event) {
 
 function displaySavedPalettes() {
   savePaletteSection.innerHTML = ""
-
   for (var i = 0; i < savedPalettes.length; i++) {
     var newPaletteElement = document.createElement('figure')
     newPaletteElement.classList.add('palettes-container')
@@ -87,14 +84,6 @@ function displaySavedPalettes() {
     savePaletteSection.appendChild(newPaletteElement)
   }
 }
-
-// newPaletteElement.innerHTML =
-// `<div class="hex-boxes" style="background-color: ${savedPalettes[i].colors[0].hexCode};height:25px;width:25px"></div>
-// //   <div class="hex-boxes" style="background-color: ${savedPalettes[i].colors[1].hexCode};height:25px;width:25px"></div>
-//   <div class="hex-boxes" style="background-color: ${savedPalettes[i].colors[2].hexCode};height:25px;width:25px"></div>
-//   <div class="hex-boxes" style="background-color: ${savedPalettes[i].colors[3].hexCode};height:25px;width:25px"></div>
-//   <div class="hex-boxes" style="background-color: ${savedPalettes[i].colors[4].hexCode};height:25px;width:25px"></div>
-//   <img class="hex-boxes" id=${i} style="height:25px;width:25px" src="./assets/bin.svg">`
 
 function displaySavedPaletteWindow() {
   savedPaletteWindow.classList.remove('hidden');

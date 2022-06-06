@@ -1,6 +1,6 @@
-* {
+/* * {
 border: 1px solid red;
-} *
+} * */
 
 
 body {
@@ -29,7 +29,6 @@ body {
 h1 {
   display: flex;
   justify-content: flex-start;
-  font-size: 50px;
   font-stretch:
 }
 
@@ -79,8 +78,24 @@ h1 {
 
 }
 
-.accordian  {
+.accordion:hover  {
+  background-color: #008080;
+  color: #FFFFFF
+}
 
+.new-palette:hover {
+  background-color: #FFC0CB;
+  color: #FFFFFF
+}
+
+.save-palette:hover {
+  background-color: #124fEC;
+  color: #FFFFFF
+}
+
+.closeSavedPaletteWindow:hover {
+  background-color: #800080
+  color: #FFFFFF
 }
 
 .font-style  {
@@ -121,6 +136,18 @@ h1 {
 .mini-palettes-container {
   display: flex;
 
+}
+
+@media screen and (min-width: 100px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 35px;
+  }
 }
 
 @media screen and (min-width: 100px) {
