@@ -1,12 +1,6 @@
 class Color {
   constructor(randNum) {
-    this.hexCode = randNum
+    this.hexCode = randHex
     this.locked = false
-  }
-  toggle() {
-    if (!this.locked) {
-      this.locked = true
-    } else
-      this.locked = false
   }
 }
