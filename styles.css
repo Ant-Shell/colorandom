@@ -12,7 +12,6 @@ body {
 h1 {
   display: flex;
   justify-content: flex-start;
-  font-stretch:
 }
 
 .main {
@@ -50,6 +49,7 @@ h1 {
 }
 
 .cool-text {
+  letter-spacing: 25px;
   background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -94,27 +94,23 @@ h1 {
 .button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   cursor: pointer;
+  color: #FFFFFF
 }
 
 .accordion:hover  {
   background-color: #008080;
-  color: #FFFFFF
-
 }
 
 .new-palette:hover {
   background-color: #FFC0CB;
-  color: #FFFFFF
 }
 
 .save-palette:hover {
   background-color: #124fEC;
-  color: #FFFFFF
 }
 
 .closeSavedPaletteWindow:hover {
   background-color: #800080;
-  color: #FFFFFF
 }
 
 .font-style  {
@@ -159,13 +155,13 @@ h1 {
 
 @media screen and (min-width: 100px) {
   span.cool-text {
-    font-size: 75px;
+    font-size: 100px;
   }
 }
 
 @media screen and (max-width: 800px) {
   span.cool-text {
-    font-size: 55px;
+    font-size: 50px;
   }
 }
 
