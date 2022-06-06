@@ -15,16 +15,28 @@ var savePaletteSection = document.querySelector('.saved-palettes');
 //EventListeners
 window.addEventListener('load', newPalette)
 colorContainer.addEventListener('click', function(event) {
-  lockColor(event)
+  toggleLockIcon(event)
 })
-newPaletteButton.addEventListener('click', newPalette)
+newPaletteButton.addEventListener('click', lockRefresh)
 savedPaletteButton.addEventListener('click', savePalette)
 accordionButton.addEventListener('click', displaySavedPaletteWindow);
 closeSavedPaletteWindowButton.addEventListener('click', closeSavedPaletteWindow)
 savePaletteSection.addEventListener('click', deleteSavedPalette)
 
-var palette;
+//var palette;
 var savedPalettes = [];
+
+function lockRefresh() {
+  for (var i = 0; i < palette.colors.length; i++) {
+    if (!palette.colors[i].locked) {
+      palette.colors[i] = new Color(getRandomColor())
+      }
+    }
+    for (var i = 0; i < palette.colors.length; i++) {
+        hexBox[i].style.backgroundColor = palette.colors[i].hexCode
+        hexValues[i].innerText = palette.colors[i].hexCode
+    }
+  }
 
 function newPalette() {
   palette = new Palette();
@@ -41,11 +53,15 @@ function randomColor() {
 }
 
 function getRandomColor() {
-  var randNum = Math.floor(Math.random() * 16777215).toString(16);
+  var randNum = ""
+  var string = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']
+  for (var i = 0; i <= 5; i++) {
+   randNum += string[Math.floor(Math.random() * 16)];
+  }
   return `#${randNum}`
 }
 
-function lockColor(event) {
+function toggleLockIcon(event) {
   var hexId = event.target.id
   for (var i = 1; i <= unlockImages.length; i++) {
     if (hexId === `unlockIcon${i}` && !palette.colors[(i - 1)].locked) {
@@ -61,6 +77,7 @@ function lockColor(event) {
 function savePalette() {
   savedPalettes.push(palette)
   displaySavedPalettes()
+  newPalette()
 }
 
 function deleteSavedPalette(event) {
